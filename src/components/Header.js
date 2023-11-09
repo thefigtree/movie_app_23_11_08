@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { routes } from "../routes";
 
 const SHeader = styled.header`
+  width: 100%;
   padding: 20px 5%;
   display: flex;
   justify-content: space-between;
@@ -10,6 +11,10 @@ const SHeader = styled.header`
   a {
     color: white;
   }
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
 `;
 
 const Logo = styled.div`
@@ -32,7 +37,7 @@ export const Header = () => {
   return (
     <SHeader>
       <Logo>
-        <Link to={routes.home}>이동진</Link>
+        <Link to={routes.home}>아리아나동그란데</Link>
       </Logo>
       <Menu>
         <li>
