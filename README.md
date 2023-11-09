@@ -2,7 +2,7 @@
 
 ## 설치 항목
 
-- [] styled-components
+- [ x ] styled-components
 - [ x ] react-router-dom
 - []
 - []
