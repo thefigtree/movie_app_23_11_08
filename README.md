@@ -18,3 +18,9 @@
 - [] Detail ui 및 전체 구성 컴포넌트 구성
 - [] Search ui 및 전체 구성 컴포넌트 구성
 - []
+
+## Info
+
+-useEffect()
+-try, catch
+-async, awite

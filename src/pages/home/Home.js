@@ -39,6 +39,8 @@ const BlackBg = styled.div`
 `;
 
 export const Home = () => {
+  nowPlaying();
+
   return (
     <div>
       <MainBanner>
