@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { nowPlaying } from "../../api";
 
@@ -45,26 +45,45 @@ export const Home = () => {
   // 2. 비동기 통신
   // 3. 예외 처리
 
+  const [nowPlayingData, setNowPlayingData] = useState();
+  // 지역변수인 변수를 전역변수로 바꾸는 방법은 useState() 사용
+
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     (async () => {
       try {
-        const data = await nowPlaying();
-        console.log(data);
+        const { results } = await nowPlaying();
+        setNowPlayingData(results);
+        setLoading(false);
       } catch (error) {
         console.log("에러" + error);
       }
     })();
   }, []);
+  // useEffect
+  // => 페이지가 렌더링, 업데이트 될 때 마다 관리 해주는 훅
+
+  console.log(loading);
+  console.log(nowPlayingData);
 
   return (
-    <div>
-      <MainBanner>
-        <BlackBg></BlackBg>
-        <h3>염죠니의 치킨가게</h3>
-        <p>
-          염죠니염죠니염죠니염죠니염죠니염죠니염죠니염죠니염죠니염죠니염죠니염죠니염죠니염죠니염죠니염죠니염죠니염죠니염죠니염죠니염죠니염죠니염죠니염죠니
-        </p>
-      </MainBanner>
-    </div>
+    <>
+      {loading ? (
+        "loading..."
+      ) : (
+        <div>
+          {nowPlayingData && (
+            <MainBanner>
+              <BlackBg></BlackBg>
+              <h3>{nowPlayingData[0].title}</h3>
+              <p>
+                염죠니염죠니염죠니염죠니염죠니염죠니염죠니염죠니염죠니염죠니염죠니염죠니염죠니염죠니염죠니염죠니염죠니염죠니염죠니염죠니염죠니염죠니염죠니염죠니
+              </p>
+            </MainBanner>
+          )}
+        </div>
+      )}
+    </>
   );
 };
