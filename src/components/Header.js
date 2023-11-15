@@ -37,7 +37,7 @@ export const Header = () => {
   return (
     <SHeader>
       <Logo>
-        <Link to={routes.home}>아리아나동그란데</Link>
+        <Link to={routes.home}>JINetflix</Link>
       </Logo>
       <Menu>
         <li>
