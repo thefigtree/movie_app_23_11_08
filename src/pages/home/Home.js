@@ -9,6 +9,7 @@ import { ShowMovie } from "./ShowMovie";
 import { SyncLoader } from "react-spinners";
 import { Loading } from "../../components/Loading";
 import { Layout } from "../../components/Layout";
+import { PageTitle } from "../../components/PageTilte";
 
 export const Home = () => {
   // 1. 마운트시 api에 요청
@@ -55,6 +56,7 @@ export const Home = () => {
         <div>
           {nowPlayingData && (
             <>
+              <PageTitle titleName={"Home"}></PageTitle>
               <Banner data={nowPlayingData[1]}></Banner>
               <Layout>
                 <ShowMovie

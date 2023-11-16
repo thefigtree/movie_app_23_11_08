@@ -15,10 +15,11 @@
 - [ x ] 각 컴포넌트 제작
 - [ x ] api 설정
 - [ x ] loading 설정
-- [] header 스크롤 이벤트 설정
-- [] Home ui 및 전체 구성
+- [ x ] Home ui 및 전체 구성
 - [] Detail ui 및 전체 구성 컴포넌트 구성
 - [] Search ui 및 전체 구성 컴포넌트 구성
+- [] header 스크롤 이벤트 설정
+- [] 전체 페이지 helmet 구성
 - [] 404 page 및 전체 구성
 
 ## Info
