@@ -19,6 +19,7 @@ body {
   letter-spacing: -1px;
   word-break: break-all;
   /* => 단어 별로 줄바꿈 처리 */
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 ul, li {

@@ -24,7 +24,7 @@ const Title = styled.h3`
 const CoverBg = styled.div`
   /* width: 150px; */
   /* Swiper 사용할 땐 반응형을 위해 가로값 넣지 않기 */
-  height: 300px;
+  height: 400px;
   background: url(${IMG_URL}/w500/${(props) => props.$bgUrl}) no-repeat center /
     cover;
   border-radius: 15px;
