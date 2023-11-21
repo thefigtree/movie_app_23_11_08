@@ -4,6 +4,7 @@ import { movieDetail } from "../../api";
 import { Loading } from "../../components/Loading";
 import styled from "styled-components";
 import { IMG_URL } from "../../constants";
+import { useScrollTop } from "../../lib/useScrollTop";
 
 const Container = styled.div`
   padding: 100px 150px 150px;
@@ -81,6 +82,7 @@ export const Detail = () => {
   const { id } = useParams();
   const [detailData, setDetailData] = useState();
   const [loading, setLoading] = useState(true);
+  useScrollTop();
 
   useEffect(() => {
     (async () => {

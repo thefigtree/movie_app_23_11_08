@@ -21,6 +21,7 @@
 - [ x ] Search ui 및 전체 구성 컴포넌트 구성
 - [ x ] helmet 사용 시 이슈 처리
 - [ x ] header 스크롤 이벤트 설정
+- [ x ] scrollTo 이벤트 설정
 - [] 전체 페이지 helmet 구성
 - [] 404 page 및 전체 구성
 
