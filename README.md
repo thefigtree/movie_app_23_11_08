@@ -4,10 +4,11 @@
 
 - [ x ] styled-components
 - [ x ] react-router-dom
-- [] 스타일 리셋
-- [] 타이틀 관련
-- [] 폰트어썸 관련
-- [] Swiper
+- [ x ] 스타일 리셋
+- [ x ] 폼 관련
+- [ x ] 타이틀 관련
+- [ x ] 폰트어썸 관련
+- [ x ] Swiper
 
 ## To Do
 
@@ -19,7 +20,7 @@
 - [ x ] Detail ui 및 전체 구성 컴포넌트 구성
 - [ x ] Search ui 및 전체 구성 컴포넌트 구성
 - [ x ] helmet 사용 시 이슈 처리
-- [] header 스크롤 이벤트 설정
+- [ x ] header 스크롤 이벤트 설정
 - [] 전체 페이지 helmet 구성
 - [] 404 page 및 전체 구성
 

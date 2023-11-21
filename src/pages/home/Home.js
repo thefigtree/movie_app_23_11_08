@@ -57,7 +57,7 @@ export const Home = () => {
           {nowPlayingData && (
             <>
               <PageTitle titleName={"Home"}></PageTitle>
-              <Banner data={nowPlayingData[1]}></Banner>
+              <Banner data={nowPlayingData[0]}></Banner>
               <Layout>
                 <ShowMovie
                   titleName={"현재 상영 영화"}

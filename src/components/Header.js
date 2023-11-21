@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { routes } from "../routes";
+import { useEffect, useRef } from "react";
 
 const SHeader = styled.header`
   width: 100%;
@@ -11,7 +12,7 @@ const SHeader = styled.header`
   a {
     color: white;
   }
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 10;
@@ -34,8 +35,28 @@ const Menu = styled.ul`
 `;
 
 export const Header = () => {
+  const headerRef = useRef();
+  // useRef => 리액트 스크롤이벤트를 위한 Hook
+  const scrollHandler = () => {
+    const pageY = window.scrollY;
+    // scrollY = sct
+    if (pageY > 300) {
+      headerRef.current.style.position = "fixed";
+      headerRef.current.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+      headerRef.current.style.backdropFilter = "blur(3px)";
+    } else {
+      headerRef.current.style.position = "absolute";
+      headerRef.current.style.backgroundColor = "transparent";
+      headerRef.current.style.backdropFilter = "blur(0px)";
+    }
+  };
+
+  useEffect(() => {
+    return window.addEventListener("scroll", scrollHandler);
+  });
+
   return (
-    <SHeader>
+    <SHeader ref={headerRef}>
       <Logo>
         <Link to={routes.home}>JINetflix</Link>
       </Logo>
