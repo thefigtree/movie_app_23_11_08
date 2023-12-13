@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { routes } from "../routes";
 import { useEffect, useRef } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const SHeader = styled.header`
   width: 100%;
@@ -19,20 +21,41 @@ const SHeader = styled.header`
 `;
 
 const Logo = styled.div`
+  /* background-color: rebeccapurple; */
   font-size: 24px;
   font-weight: 700;
+  /* margin: 0 auto; */
+  /* position: absolute; */
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
 `;
 
 const Menu = styled.ul`
+  /* background-color: red; */
+  /* margin: 0 auto; */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 18px;
   font-weight: 600;
   li {
-    margin-left: 60px;
+    margin-right: 60px;
   }
 `;
+
+// const Search = styled.div`
+//   font-size: 18px;
+//   font-weight: 600;
+//   margin-right: 60px;
+// `;
+
+// const Login = styled.div`
+//   font-size: 18px;
+//   font-weight: 600;
+// `;
 
 export const Header = () => {
   const headerRef = useRef();
@@ -40,7 +63,7 @@ export const Header = () => {
   const scrollHandler = () => {
     const pageY = window.scrollY;
     // scrollY = sct
-    if (pageY > 300) {
+    if (pageY > 0) {
       headerRef.current.style.position = "fixed";
       headerRef.current.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
       headerRef.current.style.backdropFilter = "blur(3px)";
@@ -65,7 +88,14 @@ export const Header = () => {
           <Link to={routes.home}>Home</Link>
         </li>
         <li>
+          <Link to={routes.movies}>Movies</Link>
+        </li>
+        <li>
+          <FontAwesomeIcon icon={faMagnifyingGlass}></FontAwesomeIcon>
           <Link to={routes.search}>Search</Link>
+        </li>
+        <li>
+          <Link to={routes.login}>Sign In</Link>
         </li>
       </Menu>
     </SHeader>

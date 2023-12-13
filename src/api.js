@@ -7,7 +7,7 @@ const baseUrl = "https://api.themoviedb.org/3/";
 // const upcomingUrl = baseUrl + "movie/upcoming" + "?language=ko-KR";
 
 const url = (urlName) => {
-  return baseUrl + `${urlName}` + "?language=ko-KR";
+  return baseUrl + `${urlName}?language=ko-KR`;
 };
 // 위에 여러개 있는 url변수를 매개변수화 시켜서 줄인 작업
 

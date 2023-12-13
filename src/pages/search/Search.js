@@ -40,7 +40,7 @@ export const Search = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isValid },
+    // formState: { errors, isValid },
   } = useForm({
     mode: "onSubmit",
   });

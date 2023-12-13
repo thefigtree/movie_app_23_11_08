@@ -1,12 +1,7 @@
 import { useEffect, useState } from "react";
 import { nowPlaying, popular, topRated, upcoming } from "../../api";
 import { Banner } from "./Banner";
-import styled from "styled-components";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { IMG_URL } from "../../constants";
-import { Link } from "react-router-dom";
 import { ShowMovie } from "./ShowMovie";
-import { SyncLoader } from "react-spinners";
 import { Loading } from "../../components/Loading";
 import { Layout } from "../../components/Layout";
 import { PageTitle } from "../../components/PageTilte";
@@ -57,11 +52,15 @@ export const Home = () => {
           {nowPlayingData && (
             <>
               <PageTitle titleName={"Home"}></PageTitle>
-              <Banner data={nowPlayingData[0]}></Banner>
+              <Banner data={nowPlayingData[6]}></Banner>
               <Layout>
                 <ShowMovie
                   titleName={"현재 상영 영화"}
                   movieData={nowPlayingData}
+                ></ShowMovie>
+                <ShowMovie
+                  titleName={"개봉 예정 영화"}
+                  movieData={upData}
                 ></ShowMovie>
                 <ShowMovie
                   titleName={"인기 영화"}
@@ -70,10 +69,6 @@ export const Home = () => {
                 <ShowMovie
                   titleName={"평점 높은 순위 영화"}
                   movieData={topRatedData}
-                ></ShowMovie>
-                <ShowMovie
-                  titleName={"개봉 예정 영화"}
-                  movieData={upData}
                 ></ShowMovie>
               </Layout>
             </>

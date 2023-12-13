@@ -3,7 +3,7 @@ import { IMG_URL } from "../../constants";
 
 const MainBanner = styled.section`
   height: 80vh;
-  background-color: lightgray;
+  /* background-color: lightgray; */
   position: relative;
   padding: 400px 5%;
   background: url(${IMG_URL}/original/${(props) => props.$bgUrl}) no-repeat
@@ -13,6 +13,7 @@ const MainBanner = styled.section`
     position: relative;
   }
   h3 {
+    /* background-color: red; */
     max-width: 650px;
     width: 100%;
     font-size: 80px;
@@ -22,12 +23,14 @@ const MainBanner = styled.section`
     line-height: 100px;
   }
   p {
+    /* background-color: red; */
     max-width: 650px;
     width: 100%;
     font-size: 18px;
     font-weight: 400;
     line-height: 26px;
     opacity: 0.8;
+    /* margin: 30px auto; */
   }
   @media screen and (max-width: 450px) {
     h3 {
@@ -44,9 +47,9 @@ const BlackBg = styled.div`
   width: 100%;
   height: 100%;
   background: linear-gradient(
-    0deg,
+    45deg,
     rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0.8) 55%,
+    rgba(0, 0, 0, 0.5) 55%,
     rgba(0, 0, 0, 0) 95%
   );
   position: absolute;
