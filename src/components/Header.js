@@ -21,21 +21,12 @@ const SHeader = styled.header`
 `;
 
 const Logo = styled.div`
-  /* background-color: rebeccapurple; */
   font-size: 24px;
   font-weight: 700;
-  /* margin: 0 auto; */
-  /* position: absolute; */
-  /* left: 50%; */
-  /* transform: translateX(-50%); */
 `;
 
 const Menu = styled.ul`
-  /* background-color: red; */
-  /* margin: 0 auto; */
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  background-color: red;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,17 +36,6 @@ const Menu = styled.ul`
     margin-right: 60px;
   }
 `;
-
-// const Search = styled.div`
-//   font-size: 18px;
-//   font-weight: 600;
-//   margin-right: 60px;
-// `;
-
-// const Login = styled.div`
-//   font-size: 18px;
-//   font-weight: 600;
-// `;
 
 export const Header = () => {
   const headerRef = useRef();
@@ -86,9 +66,6 @@ export const Header = () => {
       <Menu>
         <li>
           <Link to={routes.home}>Home</Link>
-        </li>
-        <li>
-          <Link to={routes.movies}>Movies</Link>
         </li>
         <li>
           <FontAwesomeIcon icon={faMagnifyingGlass}></FontAwesomeIcon>
