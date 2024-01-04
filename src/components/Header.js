@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { routes } from "../routes";
 import { useEffect, useRef } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const SHeader = styled.header`
   width: 100%;
@@ -26,7 +26,7 @@ const Logo = styled.div`
 `;
 
 const Menu = styled.ul`
-  background-color: red;
+  /* background-color: red; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,7 +43,7 @@ export const Header = () => {
   const scrollHandler = () => {
     const pageY = window.scrollY;
     // scrollY = sct
-    if (pageY > 0) {
+    if (pageY > 150) {
       headerRef.current.style.position = "fixed";
       headerRef.current.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
       headerRef.current.style.backdropFilter = "blur(3px)";
@@ -68,11 +68,8 @@ export const Header = () => {
           <Link to={routes.home}>Home</Link>
         </li>
         <li>
-          <FontAwesomeIcon icon={faMagnifyingGlass}></FontAwesomeIcon>
+          {/* <FontAwesomeIcon icon={faMagnifyingGlass}></FontAwesomeIcon> */}
           <Link to={routes.search}>Search</Link>
-        </li>
-        <li>
-          <Link to={routes.login}>Sign In</Link>
         </li>
       </Menu>
     </SHeader>
