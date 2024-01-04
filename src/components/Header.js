@@ -33,7 +33,7 @@ const Menu = styled.ul`
   font-size: 18px;
   font-weight: 600;
   li {
-    margin-right: 60px;
+    margin-left: 60px;
   }
 `;
 
